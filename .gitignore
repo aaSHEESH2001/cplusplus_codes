@@ -1,0 +1,8 @@
+.vscode/
+/*.exe
+/patterns/*.exe
+/questions/*.exe
+.exe
+*.exe
+.vscode
+/.exe
