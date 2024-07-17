@@ -14,41 +14,43 @@ class CircularQueue{
             front = rear = -1;
         }
 
+        bool isEmpty(){
+            return (front == -1 && rear == -1);
+        }
+
+        bool isFull(){
+            return ((rear+1)%size == front);
+        }
+
         bool enqueue(int x){
-            if((rear == size-1 && front == 0) || (rear == (front-1)%(size-1))){
+            if(isFull()){
                 return false;
             }
-            else if(front == -1){
+            else if(isEmpty()){
                 front = rear = 0;
             }
-            else if(rear == size-1 && front != 0){
-                rear = 0;
-            }
             else{
-                rear++;
+                rear = (rear+1)%size;
             }
             arr[rear] = x;
             return true;
         }
 
         int dequeue(){
-            if(front == -1){
+            if(isEmpty()){
                 return -1;
             }
-            int value = arr[front];
-            arr[front] = -1;
             if(front == rear){
+                int ans = arr[front];
                 front = rear = -1;
-            }
-            else if(front == size-1){
-                front = 0;
+                return ans;
             }
             else{
-                front++;
+                int ans = arr[front];
+                front = (front+1)%size;
+                return ans;
             }
-            return value;
         }
-
 };
 
 int main(){

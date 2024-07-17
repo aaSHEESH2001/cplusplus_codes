@@ -1,0 +1,16 @@
+Prims Algorithm
+Huffman Algorithm
+Cook Levin's Algorithm
+Dijkstra's Algorithm
+Bellman Ford Algorithm
+Ford Fulkerson Algorithm
+DFS and BFS algorithm
+Floyd-Warshall algorithm
+Rabin Karp algorithm
+Krushal Algorithm
+Knapsack problem
+Master method
+P,NP and NP-complete method
+Horner method
+Deterministic vs Non Deterministic
+Knuth Morris Pratt
